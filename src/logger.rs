@@ -3,8 +3,10 @@ Application logging.
 */
 
 use std::time::Duration;
+use clearify::clear;
 
 /** Initialize the global logger. */
+#[clear]
 pub fn init() {
     let _ = emit::setup()
         .emit_to(emit_term::stdout())

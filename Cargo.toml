@@ -5,6 +5,9 @@ authors = ["Ashley Mannix <ashleymannix@live.com.au>"]
 publish = false
 edition = "2024"
 
+[dependencies]
+clearify = { path = "./clearify" }
+
 [dependencies.rocket]
 version = "~0.5"
 features = ["json"]
