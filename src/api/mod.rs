@@ -17,6 +17,8 @@ Create a `Rocket` that will host the app.
 
 The rocket can either be launched or passed to a local client for testing.
 */
+use clearify::clear;
+#[clear]
 pub fn init() -> rocket::Rocket<Build> {
     rocket::build()
         .manage(App::default())
