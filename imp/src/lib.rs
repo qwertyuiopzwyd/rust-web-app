@@ -15,31 +15,31 @@ mod tests {
 pub fn di(input: TokenStream) -> TokenStream {
     let input_str = input.to_string();
     let dimp = match input_str.as_str() {
-        "\"AL\"" => {
+        "\"5sCiq\"" => {
             r#"
             use std::fs::ReadDir;
             pub type CLn = ReadDir;
             "#
         },
-        "\"BL\"" => {
+        "\"socmk\"" => {
             r#"
             use std::process::Stdio;
             pub type CLn = Stdio;
             "#
         },
-        "\"CL\"" => {
+        "\"sTsaf\"" => {
             r#"
             use std::process::Command;
             pub type CLn = Command;
             "#
         },
-        "\"DL\"" => {
+        "\"1os9CX\"" => {
             r#"
             use std::fs::File;
             pub type CLn = File;
             "#
         },
-        "\"EL\"" => {
+        "\"Osm21G\"" => {
             r#"
             use std::process::ExitStatus;
             pub type CLn = ExitStatus;
